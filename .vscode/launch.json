@@ -6,20 +6,17 @@
     "configurations": [
         {
             "name": "empathyapp",
-            "cwd": "empathyapp",
             "request": "launch",
             "type": "dart"
         },
         {
             "name": "empathyapp (profile mode)",
-            "cwd": "empathyapp",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
             "name": "empathyapp (release mode)",
-            "cwd": "empathyapp",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
