@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  catcher: ^0.7.0
+  device_info_plus: ^7.0.1
 
   cupertino_icons: ^1.0.2
 
