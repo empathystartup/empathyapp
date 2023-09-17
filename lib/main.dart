@@ -1,5 +1,6 @@
 import 'package:catcher/catcher.dart';
 import 'package:empathyapp/app/app.dart';
+import 'package:empathyapp/app/dependecies/factory/dependecy_factory.dart';
 import 'package:empathyapp/components/device_info_checker.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,12 @@ void main() async {
     customParameters: customCathcerLogParameters,
   );
 
+  final dependecyFactory = DependecyFactory.fromEnviorment();
+
   Catcher(
-    rootWidget: const App(),
+    rootWidget: App(
+      dependecyFactory: dependecyFactory,
+    ),
     debugConfig: catcherDebugOptions,
     ensureInitialized: true,
   );
