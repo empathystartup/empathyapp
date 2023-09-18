@@ -28,9 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> waitLoading() => Future.delayed(
-        const Duration(
-          seconds: 5,
-        ),
+        const Duration(seconds: 8, milliseconds: 40),
       );
 
   @override
