@@ -10,8 +10,13 @@ abstract class QuizFlowState extends Equatable {
 }
 
 class QuizCompleted extends PageState implements QuizFlowState {
-  final QuizVM quizModel;
-  QuizCompleted({required this.quizModel});
+  //final QuizVM quizModel;
+  //QuizCompleted({required this.quizModel});
+  QuizCompleted();
+}
+
+class QuizFlowError extends ErrorState implements QuizFlowState {
+  QuizFlowError(String localizedReasonKey) : super(localizedReasonKey);
 }
 
 class QuizFlowInitialState extends PageState implements QuizFlowState {}

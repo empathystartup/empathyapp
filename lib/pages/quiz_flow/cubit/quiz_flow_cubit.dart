@@ -8,22 +8,23 @@ class NavigationAction {
 }
 
 class QuizFlowNavigationCubit
-    extends Cubit<Map<Type, QuizFlowNavigationCubitMixin>> {
+    extends Cubit<Map<Type, QuizFlowNavigationMixin>> {
   QuizFlowNavigationCubit() : super({});
 
-  void updateCallbacks(
-      Type quizFlowState, QuizFlowNavigationCubitMixin action) {
-    final newMap = Map<Type, QuizFlowNavigationCubitMixin>.from(state);
+  void updateCallbacks(Type quizFlowState, QuizFlowNavigationMixin action) {
+    final newMap = Map<Type, QuizFlowNavigationMixin>.from(state);
     newMap.addAll({quizFlowState: action});
+    emit(newMap);
   }
 
   void removeCallback(Type quizFlowState) {
-    final newMap = Map<Type, QuizFlowNavigationCubitMixin>.from(state);
+    final newMap = Map<Type, QuizFlowNavigationMixin>.from(state);
     newMap.removeWhere((key, _) => key == quizFlowState);
+    emit(newMap);
   }
 }
 
-mixin QuizFlowNavigationCubitMixin {
+mixin QuizFlowNavigationMixin {
   void onForward();
   void onBack();
 }

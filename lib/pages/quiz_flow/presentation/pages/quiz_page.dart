@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-abstract class RegistrationPage extends Page {
-  RegistrationPage(String name)
-      : super(name: name, key: name != null ? ValueKey(name) : null);
+abstract class QuizPage extends Page {
+  QuizPage(String name) : super(name: name, key: ValueKey(name));
 
   Widget get child;
 
@@ -11,7 +10,6 @@ abstract class RegistrationPage extends Page {
     return PageRouteBuilder(
       settings: this,
       pageBuilder: (context, animation, secondaryAnimation) {
-        // return child;
         final tween = Tween<Offset>(
           begin: const Offset(1, 0),
           end: const Offset(0, 0),

@@ -21,6 +21,7 @@ void main() async {
       dependecyFactory: dependecyFactory,
     ),
     debugConfig: catcherDebugOptions,
+    navigatorKey: App.navigatorKey,
     ensureInitialized: true,
   );
 }

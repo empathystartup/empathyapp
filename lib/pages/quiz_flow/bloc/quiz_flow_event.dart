@@ -23,7 +23,6 @@ class SumbitThirdAnswer extends QuizFlowEvent {
   const SumbitThirdAnswer({required this.answerValue});
 }
 
-class SumbitFourthAnswer extends QuizFlowEvent {
-  final AnswerVM? answerValue;
-  const SumbitFourthAnswer({required this.answerValue});
-}
+class OnQuizCompletedEvent extends QuizFlowEvent {}
+
+class QuizFlowBack extends QuizFlowEvent {}
