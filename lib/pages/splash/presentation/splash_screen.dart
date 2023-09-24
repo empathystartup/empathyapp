@@ -24,13 +24,11 @@ class _SplashScreenState extends State<SplashScreen> {
       ],
     );
     if (!context.mounted) return;
-    await Navigator.of(context).pushReplacementNamed(Routes.login);
+    await Navigator.of(context).pushReplacementNamed(Routes.quizflow);
   }
 
   Future<void> waitLoading() => Future.delayed(
-        const Duration(
-          seconds: 5,
-        ),
+        const Duration(seconds: 8, milliseconds: 40),
       );
 
   @override

@@ -1,3 +1,4 @@
+import 'package:empathyapp/app/dependecies/dependecy_provider.dart';
 import 'package:empathyapp/app/dependecies/factory/dependecy_factory.dart';
 import 'package:empathyapp/app/routing/empathy_navigator_observer.dart';
 import 'package:empathyapp/app/routing/routes.dart';
@@ -11,11 +12,17 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: App.navigatorKey,
-      navigatorObservers: [navigation],
-      onGenerateRoute: (settings) => Routes.onGenerateRoute(settings, context),
-      initialRoute: Routes.splash,
+    return DependecyProvider(
+      dependecyFactory: dependecyFactory,
+      child: Builder(builder: (context) {
+        return MaterialApp(
+          navigatorKey: App.navigatorKey,
+          navigatorObservers: [navigation],
+          onGenerateRoute: (settings) =>
+              Routes.onGenerateRoute(settings, context),
+          initialRoute: Routes.splash,
+        );
+      }),
     );
   }
 }

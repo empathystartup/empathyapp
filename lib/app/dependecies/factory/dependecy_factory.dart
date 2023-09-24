@@ -1,9 +1,10 @@
 import 'package:empathyapp/app/dependecies/factory/dependecy_factory_core.dart';
+import 'package:empathyapp/pages/quiz_flow/bloc/quiz_flow_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http_services/http_services.dart';
 
-typedef CubitCreator<T extends Cubit> = T Function(BuildContext context);
+typedef CubitCreator<T extends BlocBase> = T Function(BuildContext context);
 
 typedef ServiceCreator<T extends HttpServiceBase> = T Function(
     BuildContext context);
@@ -37,4 +38,6 @@ abstract class DependecyFactory {
 
   @protected
   void setInterceptors();
+
+  CubitCreator<QuizFlowBloc> get createQuizFlowBloc;
 }

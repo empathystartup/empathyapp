@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:empathyapp/app/app_config.dart';
 import 'package:empathyapp/app/dependecies/factory/dependecy_factory.dart';
+import 'package:empathyapp/pages/quiz_flow/bloc/quiz_flow_bloc.dart';
 
 class DependecyFactoryCore extends DependecyFactory {
   Dio _createDioForApiGateway() {
@@ -25,4 +26,8 @@ class DependecyFactoryCore extends DependecyFactory {
   void setInterceptors() {
     //TODO: implement function
   }
+
+  @override
+  CubitCreator<QuizFlowBloc> get createQuizFlowBloc =>
+      (context) => QuizFlowBloc();
 }

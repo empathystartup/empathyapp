@@ -7,10 +7,25 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: EmpathyColors.mainBackroundColor,
+      appBar: AppBar(
+        title: Center(child: Text('ciao')),
+      ),
       body: Center(
-        child: Text('Eccomi'),
+        child: Container(
+          color: Colors.blue,
+          child: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Eccofdsfsdf dmi'),
+              Text('Eccofdsfsdf dmi'),
+              Text('Eccofdsfsdf dmi'),
+              Text('Eccofdsfsdf dmi'),
+              Text('Eccofdsfsdf dmi'),
+            ],
+          ),
+        ),
       ),
     );
   }
