@@ -1,5 +1,4 @@
 import 'package:empathyapp/common/bloc/bloc_states.dart';
-import 'package:empathyapp/pages/quiz_flow/model/quiz_model.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class QuizFlowState extends Equatable {
