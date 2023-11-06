@@ -19,6 +19,7 @@ dependencies:
   lottie: ^2.6.0
   equatable: ^2.0.5
   flow_builder: ^0.0.9
+  password_strength_checker: ^1.2.2
 
 
 dev_dependencies:
@@ -33,6 +34,12 @@ flutter:
 
   assets:
     - assets/animations/
+
+  fonts:
+    - family: OggRegular
+      fonts:
+        - asset: assets/fonts/Ogg-Regular.woff
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

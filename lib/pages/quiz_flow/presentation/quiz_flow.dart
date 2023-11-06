@@ -3,7 +3,7 @@ import 'package:empathyapp/common/bloc/bloc_states.dart';
 import 'package:empathyapp/pages/quiz_flow/bloc/quiz_flow_bloc.dart';
 import 'package:empathyapp/pages/quiz_flow/bloc/quiz_flow_state.dart';
 import 'package:empathyapp/pages/quiz_flow/cubit/quiz_flow_cubit.dart';
-import 'package:empathyapp/pages/registration/presentation/screen/login_screen.dart';
+import 'package:empathyapp/pages/registration/presentation/screen/registration_screen.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
